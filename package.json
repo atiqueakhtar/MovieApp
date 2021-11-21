@@ -4,6 +4,7 @@
   "description": "react and express app",
   "main": "server.js",
   "scripts": {
+    "hroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "client-install": "cd client && npm install",
     "start": "node server.js",
     "server": "nodemon server.js",
