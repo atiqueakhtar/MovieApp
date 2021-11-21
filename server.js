@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const port = 5000;
+const path = require('path')
+const port = process.env.PORT || 5000;
 const moviesData = {
     romance: [{
             name: "Twilight",
@@ -142,4 +143,10 @@ app.post('/genre-specific', (req, res) => {
     res.send(movieList);
 })
 
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'client/build')));
+    app.get('*', function (req, res) {
+        res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    });
+}
 app.listen(port, () => console.log(`server started at port ${port}`));
