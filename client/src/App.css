@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #282c34;
+  min-height: 100vh;
+  color: aliceblue;
+}
+
+nav {
+  /* background-color: rgb(139, 138, 137); */
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  text-align: start;
+}
+
+.nav-list-item {
+  display: inline;
+  margin: 0.8rem;
+}
+
+.nav-list-link {
+  text-decoration: none;
+  font-weight: bold;
+  color: antiquewhite;
+}
+
+.movies-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  background-color: #8b8b8b;
+  width: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px -5px;
+  margin: 1.5rem auto;
+  padding: 0.5rem;
+}
+
+.card-container:hover {
+  background-color: #8b8b8b;
+  width: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 25px -5px;
+  margin: 1.5rem auto;
+  padding: 0.5rem;
+}
+
+.card-header {
+  margin-block-start: 0em;
+  /* margin-block-end: 0em; */
+}
+
+.search {
+  margin-top: .5rem;
+  margin-right: 2rem;
+  padding: 0rem 2rem;
+  height: 35px;
+  border-radius: 25px;
+  width: 300px;
+}
+.page-intro{
+  text-align: center;
+  font-weight: bold;
+  color: antiquewhite;
+  font-size: x-large;
+}
