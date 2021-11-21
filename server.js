@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const path = require('path')
+const path = require('path');
+const cors = require('cors');
 const port = process.env.PORT || 5000;
 const moviesData = {
     romance: [{
@@ -122,7 +123,8 @@ const moviesData = {
 
     ]
 }
-const whitelist = ['http://localhost:5000', 'https://fast-wildwood-65721.herokuapp.com']
+
+const whitelist = ['http://localhost:5000/', 'https://fast-wildwood-65721.herokuapp.com/']
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin)
@@ -135,7 +137,6 @@ const corsOptions = {
     }
   }
 }
-
 app.use(cors(corsOptions))
 app.use(express.json());
 app.use(express.urlencoded({
